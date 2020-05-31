@@ -2,6 +2,9 @@ package com.mycompany.store.service;
 
 import com.mycompany.store.domain.ProductCategory;
 import com.mycompany.store.repository.ProductCategoryRepository;
+import com.mycompany.store.security.AuthoritiesConstants;
+import com.mycompany.store.security.SecurityUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

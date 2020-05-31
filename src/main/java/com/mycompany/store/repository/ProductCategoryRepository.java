@@ -1,5 +1,8 @@
 package com.mycompany.store.repository;
 
+import java.util.List;
+import java.util.Optional;
+
 import com.mycompany.store.domain.ProductCategory;
 
 import org.springframework.data.jpa.repository.*;
