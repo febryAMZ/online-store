@@ -53,7 +53,6 @@ public class CustomerResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("/customers")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public ResponseEntity<Customer> createCustomer(@Valid @RequestBody Customer customer) throws URISyntaxException {
         log.debug("REST request to save Customer : {}", customer);
         if (customer.getId() != null) {
@@ -75,7 +74,6 @@ public class CustomerResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/customers")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public ResponseEntity<Customer> updateCustomer(@Valid @RequestBody Customer customer) throws URISyntaxException {
         log.debug("REST request to update Customer : {}", customer);
         if (customer.getId() == null) {
@@ -121,7 +119,6 @@ public class CustomerResource {
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/customers/{id}")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public ResponseEntity<Void> deleteCustomer(@PathVariable Long id) {
         log.debug("REST request to delete Customer : {}", id);
         customerService.delete(id);
