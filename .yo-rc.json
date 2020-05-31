@@ -38,6 +38,8 @@
     "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": ["en", "zh-cn", "ta"],
-    "blueprints": []
+    "blueprints": [],
+    "herokuAppName": "online-store-0001",
+    "herokuDeployType": "jar"
   }
 }
