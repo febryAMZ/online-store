@@ -51,18 +51,15 @@ node {
     }
 
     stage('quality analysis') {
-        tools {
-            sonarQube 'SonarQube Scanner 2.8'
-        }
         withSonarQubeEnv('sonar') {
             sh "./gradlew sonarqube --no-daemon"
         }
     }
 
-    def dockerImage
-    stage('publish docker') {
+    //def dockerImage
+    //stage('publish docker') {
         // A pre-requisite to this step is to setup authentication to the docker registry
         // https://github.com/GoogleContainerTools/jib/tree/master/jib-gradle-plugin#authentication-methods
-        sh "./gradlew jib"
-    }
+        //sh "./gradlew jib"
+    //}
 }
